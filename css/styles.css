@@ -1,0 +1,340 @@
+/*
+  ==============================================
+  Estilos Generales y Reset
+  ==============================================
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+}
+
+body {
+    background-color: #f7f7f7; 
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+/*
+  ==============================================
+  1. BARRA SUPERIOR NEGRA (.top-bar) - HOME
+  ==============================================
+*/
+
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.top-links a {
+    margin-left: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+/*
+  ==============================================
+  2. BARRA DE NAVEGACIÓN PRINCIPAL (.main-header) - HOME
+  ==============================================
+*/
+
+.main-header {
+    background-color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-right: 40px;
+    color: #000;
+}
+
+.main-nav a {
+    margin-right: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions .icon-link {
+    font-size: 1.2em;
+    margin-left: 25px;
+    font-weight: normal; 
+    color: #333; 
+}
+
+/*
+  ==============================================
+  3. SECCIÓN PRINCIPAL / HERO - HOME
+  ==============================================
+*/
+
+.hero-section {
+    padding: 60px 5%;
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    background-color: #fff;
+}
+
+.hero-text {
+    flex: 1; 
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    font-size: 1em;
+    color: #666;
+    max-width: 80%;
+}
+
+.hero-image {
+    flex: 1; 
+    max-width: 50%;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+  ==============================================
+  4. PRODUCTOS DESTACADOS - HOME
+  ==============================================
+*/
+
+.featured-products {
+    padding: 40px 5%;
+    background-color: #f7f7f7;
+}
+
+.featured-products h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px; 
+}
+
+.product-image-container {
+    background-color: #f0f0f0; 
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    
+    /* CRUCIAL para posicionar el logo de la marca */
+    position: relative; 
+}
+
+/* Estilo para el logo de la marca */
+.product-brand-logo {
+    position: absolute; 
+    top: 10px; 
+    left: 10px;
+    width: 30px; 
+    height: auto;
+    z-index: 5; 
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+}
+
+.product-image-container img:not(.product-brand-logo) {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin-top: 10px; 
+}
+
+.product-info h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #000;
+}
+
+
+/*
+  ==============================================
+  5. SECCIÓN DE OFERTAS MUNDIALISTAS
+  ==============================================
+*/
+
+.offers-hero {
+    /* Configuración de la imagen de fondo: REEMPLAZA ESTA RUTA */
+    background-image: url(/img/bg.jpg); 
+    background-size: cover;
+    background-position: center bottom; 
+    padding: 60px 5%; 
+    position: relative;
+    color: #fff; 
+    min-height: 110vh; 
+    
+    /* Oscurecer el fondo para que el texto blanco sea legible */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.promotion-text {
+    margin-bottom: 30px;
+    padding-left: 0; 
+}
+
+.promotion-text h2 {
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.promotion-text .subtitle {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #eee;
+    margin-top: 5px;
+}
+
+.offer-product-grid {
+    width: 90%; 
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    row-gap: 100px; 
+}
+
+.product-card-offer {
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Etiqueta "L" azul sobre el jersey de Argentina (segundo hijo) */
+.product-card-offer:nth-child(2)::before { 
+    content: "L";
+    position: absolute;
+    top: 50px; 
+    left: 10px; 
+    background-color: #007bff; 
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 50%; 
+    z-index: 10;
+}
+
+.product-card-offer img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-info-offer {
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.product-info-offer h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-details {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Precios (Clave para las ofertas) */
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.old-price {
+    color: #ff3333; 
+    text-decoration: line-through; 
+    font-size: 0.9em;
+}
+
+.discount {
+    color: #00ff00; 
+    font-size: 0.9em;
+}
+
+.new-price {
+    color: #fff; 
+    font-size: 1.1em;
+    font-weight: 800;
+}
