@@ -79,7 +79,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    /* 🚀 CAMBIO 1: Alinea horizontalmente el título y el formulario */
+    align-items: center; 
 }
 
 .welcome-title {
@@ -138,7 +139,8 @@ body {
     background-color: #000;
     color: #fff;
     border: none;
-    width: 150px;
+    width: 100%;        
+    max-width: 400px;      
     padding: 15px 0;
     font-size: 1.1em;
     font-weight: 700;
@@ -151,3 +153,4 @@ body {
 .btn-login:hover {
     background-color: #333;
 }
+
