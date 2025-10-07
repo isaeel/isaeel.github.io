@@ -1,5 +1,14 @@
 /*
   ==============================================
+  IMPORTACIÓN DE FUENTE DE GOOGLE FONTS
+  (Necesaria para que "Lilita One" funcione)
+  ==============================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+/*
+  ==============================================
   Estilos Generales y Reset
   ==============================================
 */
@@ -7,8 +16,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* La fuente del logo es cursiva, usaremos una fuente cursiva genérica */
-    font-family: Arial, sans-serif; 
+    /* Aplicación global de la nueva fuente */
 }
 
 body {
@@ -23,11 +31,12 @@ body {
   ==============================================
 */
 .login-header {
+    font-family: "Leckerli One", cursive;
     background-color: #000;
     color: #fff;
     padding: 10px 5%;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /*
@@ -48,7 +57,7 @@ body {
 .left-panel {
     width: 50%;
     /* Ruta de tu imagen de fondo: el balón y la ciudad */
-    background-image: url(/img/bg2.jpg); 
+    background-image: url(/img/bg4.jpg); 
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -58,7 +67,7 @@ body {
 }
 
 .logo-login {
-    /* Estilo para la fuente cursiva del logo */
+    /* MANTIENE el estilo cursivo a pesar del selector * */
     font-family: "Brush Script MT", cursive; 
     font-size: 4em;
     color: #000;
@@ -79,11 +88,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* 🚀 CAMBIO 1: Alinea horizontalmente el título y el formulario */
+    /* Alinea horizontalmente el título y el formulario */
     align-items: center; 
 }
 
 .welcome-title {
+    font-family: "Inter", bold700;
     font-size: 3em;
     font-weight: 900;
     margin-bottom: 40px;
@@ -96,6 +106,7 @@ body {
 }
 
 .login-form label {
+    font-family: "Inter", bold700;
     display: block;
     font-size: 1.1em;
     font-weight: 600;
@@ -107,7 +118,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #000;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -136,15 +147,16 @@ body {
 }
 
 .btn-login {
+    font-family: "Inter", bold700;
     background-color: #000;
     color: #fff;
     border: none;
-    width: 100%;        
-    max-width: 400px;      
+    width: 100%; 
+    max-width: 400px; 
     padding: 15px 0;
     font-size: 1.1em;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     margin-top: 40px;
     transition: background-color 0.3s;
@@ -153,4 +165,3 @@ body {
 .btn-login:hover {
     background-color: #333;
 }
-
