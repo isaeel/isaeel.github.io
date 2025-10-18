@@ -1,195 +1,115 @@
-/*
-  ==============================================
-  IMPORTACIÓN DE FUENTE Y LOGO CURSIVO
-  ==============================================
-*/
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Brush+Script+MT&display=swap'); /* Incluye Lilita One y una fuente cursiva */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Brush+Script+MT&display=swap');
 
-
-/*
-  ==============================================
-  Estilos Generales y Reset
-  ==============================================
-*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Lilita One", sans-serif; 
+    font-family: "Lilita One", sans-serif;
 }
 
 body {
-    background-color: #ffffff; 
-    color: #000000;
+    background-color: #fff;
+    color: #000;
     line-height: 1.6;
     min-height: 100vh;
 }
 
 a {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
 }
 
-/*
-  ==============================================
-  1. BARRA SUPERIOR NEGRA (.top-bar) - HOME
-  ==============================================
-*/
-
+/* 1. BARRA SUPERIOR NEGRA */
 .top-bar {
     background-color: #000;
     color: #fff;
     padding: 15px 5%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     font-size: 0.9em;
     text-align: center;
+    position: relative;
 }
 
-/* ✨ CLAVE: Este div ayudará a empujar el texto central */
-.top-bar-left {
-    flex-grow: 0.4;
-}
+.top-bar-left { flex-grow: 0.4; }
+.top-bar-right, .shipping-info { position: absolute; display: flex; align-items: center; }
+.top-bar-right { flex-grow: 1; justify-content: flex-end; }
+.shipping-info { flex-grow: 1; text-align: center; }
 
-.top-bar-right {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+.top-links { display: flex; align-items: center; }
+.top-links a { margin-left: 20px; }
 
-.shipping-info {
-    /* ✨ CLAVE: Permite que el texto de envíos se centre */
-    flex-grow: 1; 
-    text-align: center;
-}
-
-.top-links {
-    display: flex; /* Asegura que los links estén en línea */
-    align-items: center;
-}
-
-.top-links a {
-    margin-left: 20px;
-}
-
-/*
-  ==============================================
-  2. BARRA DE NAVEGACIÓN PRINCIPAL (.main-header) - HOME
-  ==============================================
-*/
-
+/* 2. BARRA DE NAVEGACIÓN PRINCIPAL */
 .main-header {
     background-color: #fff;
     padding: 15px 5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ffffff;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
 }
 
 .logo h1 {
-    /* CLAVE: Estilo Cursivo para el logo "Golazo" */
     font-family: "Leckerli One", cursive;
-    font-size: 2.5em; /* Ligeramente más grande que 1.8em para el efecto cursivo */
-    font-weight: normal; /* El estilo cursivo ya le da el peso */
-    margin-right: 40px;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin-right: 20px;
     color: #000;
 }
 
-/*
-  ==============================================
-  2. BARRA DE NAVEGACIÓN PRINCIPAL (.main-header) - HOME
-  ==============================================
-*/
-
 .main-nav {
-    /* ✨ CLAVE: Esto empuja los enlaces "Mujeres, Hombres, Niños" a la izquierda
-       y separa los iconos de acción, creando el espacio central. */
-    flex-grow: -1; 
-    /* Asegura que los enlaces de navegación estén alineados en fila */
-    display: flex; 
+    display: flex;
+    justify-content: center;
+    flex: 1;
     align-items: center;
-    /* Un pequeño margen para separar el menú del logo */
-    margin-left: 20px; 
 }
 
 .main-nav a {
-    /* Mantenemos tu espaciado entre los links de navegación */
-    margin-right: 30px;
+    margin: 0 15px;
     font-size: 1.1em;
     font-weight: 600;
-    color: #000000;
+    color: #000;
 }
 
-.user-actions {
-    display: flex;
-    align-items: center;
-}
-
+.user-actions { display: flex; align-items: center; }
 .user-actions .icon-link {
     font-size: 1.2em;
     margin-left: 25px;
-    font-weight: normal; 
-    color: #000000; 
+    font-weight: normal;
+    color: #000;
 }
 
-/*
-  ==============================================
-  3. SECCIÓN PRINCIPAL / HERO - HOME
-  ==============================================
-*/
-
+/* 3. SECCIÓN PRINCIPAL / HERO */
 .hero-section {
     padding: 10px 5%;
     display: flex;
     align-items: center;
-    gap: 40px; 
+    gap: 40px;
     background-color: #fff;
 }
 
-.hero-text {
-    flex: 1; 
-    max-width: 50%;
-}
-
+.hero-text { flex: 1; max-width: 50%; }
 .hero-text h2 {
     font-size: 4.5em;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.1;
 }
-
 .hero-text p {
     font-size: 1em;
-    color: #000000;
+    color: #000;
     max-width: 80%;
 }
 
-.hero-image {
-    flex: 3; 
-    max-width: 50%;
-    text-align: right;
-}
+.hero-image { flex: 3; max-width: 50%; text-align: right; }
+.hero-image img { max-width: 100%; height: auto; }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/*
- ==============================================
- 4. PRODUCTOS DESTACADOS - HOME
- ==============================================
-*/
-
+/* 4. PRODUCTOS DESTACADOS */
 .featured-products {
     padding: 20px 7%;
-    background-color: #ffffff; /* Corregido a f7f7f7 como en la imagen */
+    background-color: #fff;
 }
-
 .featured-products h3 {
     font-size: 2.5em;
     font-weight: 600;
@@ -198,153 +118,135 @@ a {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
+/* TARJETAS DE PRODUCTOS FIJAS */
 .product-card {
     overflow: hidden;
-    padding: 15px; 
+    padding: 15px;
+    flex: 0 0 auto; /* bloquea tamaño en flex/grid */
 }
 
 .product-image-container {
-    background-color: #f0f0f0; 
-    padding: 20px 10px 40px 10px; /* Aumentado padding-bottom para dar espacio al texto */
-    /* Removido margin-bottom ya que el texto ahora está dentro */
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    padding: 20px 10px 40px;
     display: flex;
-    flex-direction: column; /* Para apilar imagen y texto verticalmente */
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* ✨ CLAVE: Borde redondeado al contenedor de imagen (área gris) */
-    border-radius: 70px; 
-    position: relative; 
+    border-radius: 70px;
+    position: relative;
 }
 
-/* Estilo para el logo de la marca */
 .product-brand-logo {
-    position: absolute; 
-    top: 30px; 
+    position: absolute;
+    top: 30px;
     left: 35px;
-    width: 30px; 
+    width: 30px;
     height: auto;
-    z-index: 5; 
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+    z-index: 5;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
 }
 
 .product-image-container img:not(.product-brand-logo) {
-    /* CLAVE: Aumentado a 100% para que el jersey sea más grande */
-    max-width: 100%; 
+    width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
-    margin-top: 10px; 
-    margin-bottom: 10px; /* Espacio entre imagen y texto */
 }
 
 .product-info {
     width: 100%;
-    text-align: left; /* Centrar el texto dentro del gris */
-    padding: 10px; /* Padding interno para el texto */
-    border-radius: 5px; /* Bordes redondeados suaves para el bloque de texto */
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
 }
-
 .product-info h4 {
     font-size: 1.4em;
     font-weight: 600;
-    /* Reducido el margen para que el texto esté más compacto */
-    margin-bottom: 2px; 
+    margin-bottom: 2px;
     line-height: 1.2;
 }
-
 .product-description {
     font-size: 1.1em;
-    color: #000000;
-    /* Reducido el margen para que el precio suba */
-    margin-bottom: 2px; 
+    color: #000;
+    margin-bottom: 2px;
 }
-
 .product-price {
     font-size: 1.7em;
     font-weight: 700;
     color: #000;
 }
 
-
-/*
-  ==============================================
-  5. SECCIÓN DE OFERTAS MUNDIALISTAS
-  ==============================================
-*/
-
+/* 5. SECCIÓN DE OFERTAS MUNDIALISTAS */
 .offers-hero {
     background-image: url(/img/bg3.jpg);
     background-size: cover;
-    background-position: center bottom; 
-    padding: 60px 5%; 
+    background-position: center bottom;
+    padding: 60px 5%;
     position: relative;
-    color: #fff; 
-    min-height: 110vh; 
+    color: #fff;
+    min-height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.promotion-text {
-    margin-bottom: 30px;
-    padding-left: 0; 
-}
-
+.promotion-text { margin-bottom: 30px; padding-left: 0; }
 .promotion-text h2 {
     font-size: 3.5em;
     font-weight: 800;
     line-height: 1.1;
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-
 .promotion-text .subtitle {
     font-size: 2em;
     font-weight: 600;
-    color: #000000;
+    color: #000;
     margin-top: 5px;
 }
 
 .offer-product-grid {
-    width: 90%; 
+    width: 90%;
     margin: 30px auto 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; 
-    row-gap: 100px; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    row-gap: 100px;
 }
 
+/* TARJETAS DE OFERTAS FIJAS */
 .product-card-offer {
+    flex: 0 0 auto; /* bloquea tamaño */
     border-radius: 80px;
-    position: relative; 
-    background-color: rgba(255, 255, 255, 0.8); /* ✨ CLAVE: Aumentado de 0.2 a 0.8 para más blanco/opaco. Usa 1.0 para blanco sólido */
+    position: relative;
+    background-color: rgba(255,255,255,0.8);
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* ✨ CLAVE: Borde más visible (de 0.2 a 0.5) */
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 .product-card-offer img {
-    /* Tamaño fijo: ajusta 'height' según el diseño (ej. 250px para jerseys medianos) */
-    width: 100%;  /* Ocupa todo el ancho disponible de la tarjeta */
-    height: 200px; /* Altura fija para uniformidad; prueba con 200px o 300px si necesitas ajustar */
-    object-fit: contain; /* Mantiene la proporción sin distorsión; usa 'cover' si prefieres recortar */
+    width: 100%;
+    height: auto; /* mantiene tamaño actual */
+    object-fit: contain;
     margin-bottom: 10px;
-    display: block; /* Asegura que se centre correctamente */
+    display: block;
 }
-
 
 .product-info-offer {
     width: 100%;
-    color: #000000;
+    color: #000;
     padding: 10px 0;
 }
-
 .product-info-offer h4 {
     font-size: 1.4em;
     font-weight: 600;
@@ -353,11 +255,10 @@ a {
 
 .product-details {
     font-size: 1.3em;
-    color: #000000;
+    color: #000;
     margin-bottom: 10px;
 }
 
-/* Estilos de Precios (Clave para las ofertas) */
 .prices {
     display: flex;
     justify-content: center;
@@ -366,20 +267,17 @@ a {
     font-weight: 700;
     margin-top: 5px;
 }
-
 .old-price {
-    color: #ff3333; 
-    text-decoration: line-through; 
+    color: #ff3333;
+    text-decoration: line-through;
     font-size: 1.7em;
 }
-
 .discount {
-    color: #0080ff; 
+    color: #0080ff;
     font-size: 1.7em;
 }
-
 .new-price {
-    color: #000000; 
+    color: #000;
     font-size: 1.9em;
     font-weight: 800;
 }
