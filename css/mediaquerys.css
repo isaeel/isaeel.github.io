@@ -435,4 +435,32 @@
     .new-price {
         font-size: 1.9em;
     }
+    /*Efectos para tablets*/
+/* Efecto general para todas las tarjetas de productos */
+    .product-card, .product-card-offer {
+        border-radius: 20px; /* un poco más redondeadas que en móvil */
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* sombra más suave */
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        cursor: pointer;
+        background-color: #fff; 
+        overflow: hidden;
+    }
+
+    /* Zoom suave de la imagen dentro de la tarjeta */
+    .product-card img, .product-card-offer img {
+        transition: transform 0.25s ease;
+        border-radius: 15px; /* mantener la forma redondeada */
+    }
+
+    /* Efecto al tocar o pasar el mouse sobre la tarjeta */
+    .product-card:hover, .product-card-offer:hover,
+    .product-card:active, .product-card-offer:active {
+        transform: translateY(-6px) scale(1.04);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .product-card:hover img, .product-card-offer:hover img,
+    .product-card:active img, .product-card-offer:active img {
+        transform: scale(1.06);
+    }
 }
