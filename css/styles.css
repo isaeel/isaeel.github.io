@@ -32,6 +32,15 @@ a {
     position: relative;
 }
 
+.fa-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    vertical-align: -0.3em; /* Sube ~1.5-2px; ajusta a -0.15em si es poco */
+}
+     
+     
+
 .top-bar-left { flex-grow: 0.4; }
 .top-bar-right, .shipping-info { position: absolute; display: flex; align-items: center; }
 .top-bar-right { flex-grow: 1; justify-content: flex-end; }
@@ -41,6 +50,16 @@ a {
 .top-links a { margin-left: 20px; }
 
 /* 2. BARRA DE NAVEGACIÓN PRINCIPAL */
+.user-icon {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.bag-icon {
+    vertical-align: -0.15em; /* Sube el ícono ~2-3px; ajusta a -0.2em si es poco */
+}
+
 .main-header {
     background-color: #fff;
     padding: 15px 5%;
@@ -184,7 +203,7 @@ a {
 
 /* 5. SECCIÓN DE OFERTAS MUNDIALISTAS */
 .offers-hero {
-    background-image: url(/img/bg3.jpg);
+    background-image: url(/img/bg3.webp);
     background-size: cover;
     background-position: center bottom;
     padding: 60px 5%;

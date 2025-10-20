@@ -57,7 +57,7 @@ body {
 .left-panel {
     width: 50%;
     /* Ruta de tu imagen de fondo: el balón y la ciudad */
-    background-image: url(/img/bg4.jpg); 
+    background-image: url(/img/bg4.webp); 
     background-size: cover;
     background-position: center;
     padding: 30px;

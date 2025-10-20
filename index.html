@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="./css/mediaquerys.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"></noscript>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"></noscript>
+    </head><body>
 
     <div class="top-bar">
         <div class="top-bar-left"></div> 
         <p class="shipping-info">Envíos gratis a partir de $1500</p>
         <nav class="top-links">
-            <a href="#"><i class="fa-solid fa-truck-fast"></i> Sigue tu orden</a>
+       <a href="#"><svg viewBox="0 0 640 512" class="fa-icon"><path fill="currentColor" d="M64 160C64 124.7 92.7 96 128 96L416 96C451.3 96 480 124.7 480 160L480 192L530.7 192C547.7 192 564 198.7 576 210.7L621.3 256C633.3 268 640 284.3 640 301.3L640 448C640 483.3 611.3 512 576 512L572.7 512C562.3 548.9 528.3 576 488 576C447.7 576 413.8 548.9 403.3 512L300.7 512C290.3 548.9 256.3 576 216 576C175.7 576 141.8 548.9 131.3 512L128 512C92.7 512 64 483.3 64 448L64 400L24 400C10.7 400 0 389.3 0 376C0 362.7 10.7 352 24 352L136 352C149.3 352 160 341.3 160 328C160 314.7 149.3 304 136 304L24 304C10.7 304 0 293.3 0 280C0 266.7 10.7 256 24 256L200 256C213.3 256 224 245.3 224 232C224 218.7 213.3 208 200 208L24 208C10.7 208 0 197.3 0 184C0 170.7 10.7 160 24 160L64 160zM576 352L576 301.3L530.7 256L480 256L480 352L576 352zM256 488C256 465.9 238.1 448 216 448C193.9 448 176 465.9 176 488C176 510.1 193.9 528 216 528C238.1 528 256 510.1 256 488zM488 528C510.1 528 528 510.1 528 488C528 465.9 510.1 448 488 448C465.9 448 448 465.9 448 488C448 510.1 465.9 528 488 528z"/></svg> Sigue tu orden</a>
             <a href="#">Tiendas</a>
             <a href="#">Soporte</a>
         </nav>
@@ -37,9 +36,9 @@
         </nav>
         
         <div class="user-actions">
-            <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i> Buscar productos</a>
-            <a href="login.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
-            <a href="#" class="icon-link"><i class="fa-solid fa-bag-shopping"></i></a>
+<a href="#" class="icon-link"><svg viewBox="0 0 512 512" class="fa-icon search-icon"><path fill="currentColor" d="M416 208C416 253.9 401.1 296.3 376 330.7L502.6 457.4C515.1 469.9 515.1 490.2 502.6 502.7C490.1 515.2 469.8 515.2 457.3 502.7L330.7 376C296.3 401.1 253.9 416 208 416C93.1 416 0 322.9 0 208C0 93.1 93.1 0 208 0C322.9 0 416 93.1 416 208zM208 352C287.5 352 352 287.5 352 208C352 128.5 287.5 64 208 64C128.5 64 64 128.5 64 208C64 287.5 128.5 352 208 352z"/></svg> Buscar productos</a>
+            <a href="login.html" class="icon-link"><svg viewBox="0 0 512 512" class="fa-icon user-icon"><path fill="currentColor" d="M256 256C299 256 332 223 332 180C332 137 299 104 256 104C213 104 180 137 180 180C180 223 213 256 256 256zM352 352C352 301.6 311.4 260 261 260H251C200.6 260 160 301.6 160 352V368C160 381.3 171.3 392 184.6 392L327.4 392C340.7 392 352 381.3 352 368V352z"/></svg></a>
+           <a href="#" class="icon-link"><svg viewBox="0 0 512 512" class="fa-icon bag-icon"><path fill="currentColor" d="M176 144C176 108.7 204.7 80 240 80C275.3 80 304 108.7 304 144V192H176V144zM160 192H96C69.5 192 48 213.5 48 240V448C48 501 91 544 144 544H368C421 544 464 501 464 448V240C464 213.5 442.5 192 416 192H352V144C352 82.1 301.9 32 240 32C178.1 32 128 82.1 128 144V192H160zM192 240C205.3 240 216 250.7 216 264C216 277.3 205.3 288 192 288C178.7 288 168 277.3 168 264C168 250.7 178.7 240 192 240zM320 264C320 250.7 330.7 240 344 240C357.3 240 368 250.7 368 264C368 277.3 357.3 288 344 288C330.7 288 320 277.3 320 264z"/></svg></a>
         </div>
     </header>
 
@@ -51,7 +50,7 @@
                 <p>Somos una tienda en línea especializada en jerseys de fútbol 100% originales, de todas las marcas más reconocidas. Aquí encontrarás los modelos más actuales para apoyar a tu equipo favorito con estilo y seguridad, desde cualquier lugar y en cualquier momento.</p>
             </div>
             <div class="hero-image">
-                <img src="./img/jerseys1.png" alt="Jerseys de fútbol de varios equipos">
+                <img src="./img/jerseys1.webp" alt="..." width="800" height="600" loading="lazy">
             </div>
         </section>
 
@@ -61,8 +60,8 @@
                 
                 <article class="product-card">
                     <div class="product-image-container">
-                        <img src="./img/nike.png" alt="Logo de Nike" class="product-brand-logo">
-                        <img src="./img/barca.png" alt="Jersey Barcelona 23/24 Local">
+                        <img src="./img/nike.webp" alt="Logo de Nike" class="product-brand-logo" loading="lazy">
+                        <img src="./img/barca.webp" alt="Jersey Barcelona 23/24 Local">
                         <div class="product-info">
                             <h4>FC Barcelona 2025/26 Match Local</h4>
                             <p class="product-description">Jersey Nike Kits FC A/W Authentic para hombre</p>
@@ -73,8 +72,8 @@
 
                 <article class="product-card">
                     <div class="product-image-container">
-                        <img src="./img/adidas.png" alt="Logo de Adidas" class="product-brand-logo">
-                        <img src="./img/madrid.png" alt="Jersey Real Madrid 23/24 Local">
+                        <img src="./img/adidas.webp" alt="Logo de Adidas" class="product-brand-logo" loading="lazy">
+                        <img src="./img/madrid.webp" alt="Jersey Real Madrid 23/24 Local">
                         <div class="product-info">
                             <h4>Real Madrid CF Match Local</h4>
                             <p class="product-description">Playera auténtica de local del Real Madrid 23/24</p>
@@ -85,8 +84,8 @@
 
                 <article class="product-card">
                     <div class="product-image-container">
-                        <img src="./img/puma.png" alt="Logo de Puma" class="product-brand-logo">
-                        <img src="./img/city.png" alt="Jersey Manchester City 23/24 Local">
+                        <img src="./img/puma.webp" alt="Logo de Puma" class="product-brand-logo" loading="lazy">
+                        <img src="./img/city.webp" alt="Jersey Manchester City 23/24 Local">
                         <div class="product-info">
                             <h4>Manchester City Match Local</h4>
                             <p class="product-description">Playera Manchester City 23/24 Local para hombre</p>
@@ -108,7 +107,7 @@
             <div class="offer-product-grid">
                 
                 <article class="product-card-offer">
-                    <img src="./img/mexico.png" alt="Jersey Selección de México">
+                    <img src="./img/mexico.webp" alt="Jersey Selección de México" loading="lazy">
                     <div class="product-info-offer">
                         <h4>Jersey Local Selección de México</h4>
                         <p class="product-details">Jersey de fútbol México - Qatar 2022</p>
@@ -121,7 +120,7 @@
                 </article>
 
                 <article class="product-card-offer">
-                    <img src="./img/argentina.png" alt="Jersey Selección de Argentina">
+                    <img src="./img/argentina.webp" alt="Jersey Selección de Argentina" loading="lazy">
                     <div class="product-info-offer">
                         <h4>Jersey Local Selección de Argentina</h4>
                         <p class="product-details">Jersey de fútbol Argentina - Qatar 2022</p>
@@ -134,7 +133,7 @@
                 </article>
 
                 <article class="product-card-offer">
-                    <img src="./img/brasil.png" alt="Jersey Selección de Brasil">
+                    <img src="./img/brasil.webp" alt="Jersey Selección de Brasil" loading="lazy">
                     <div class="product-info-offer">
                         <h4>Jersey Local Selección de Brasil</h4>
                         <p class="product-details">Jersey de fútbol Brasil - Qatar 2022</p>
@@ -147,7 +146,7 @@
                 </article>
 
                 <article class="product-card-offer">
-                    <img src="./img/francia.png" alt="Jersey Selección de Francia">
+                    <img src="./img/francia.webp" alt="Jersey Selección de Francia" loading="lazy">
                     <div class="product-info-offer">
                         <h4>Jersey Local Selección de Francia</h4>
                         <p class="product-details">Jersey de fútbol Francia - Qatar 2022</p>
@@ -160,7 +159,7 @@
                 </article>
 
                 <article class="product-card-offer">
-                    <img src="./img/marruecos.png" alt="Jersey Selección de Marruecos">
+                    <img src="./img/marruecos.webp" alt="Jersey Selección de Marruecos" loading="lazy">
                     <div class="product-info-offer">
                         <h4>Jersey Local Selección de Marruecos</h4>
                         <p class="product-details">Jersey de fútbol Marruecos - Qatar 2022</p>
@@ -174,7 +173,7 @@
                 </article>
                 
                 <article class="product-card-offer">
-                    <img src="./img/alemania.png" alt="Jersey Selección de Alemania">
+                    <img src="./img/alemania.webp" alt="Jersey Selección de Alemania" loading="lazy">
                     <div class="product-info-offer">
                         <h4>Jersey Local Selección de Alemania</h4>
                         <p class="product-details">Jersey de fútbol Alemania - Qatar 2022</p>
