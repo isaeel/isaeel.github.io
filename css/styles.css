@@ -17,6 +17,12 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    transition: outline 0.2s ease;
+}
+
+a:focus {
+    outline: 2px solid #0080ff;
+    outline-offset: 2px;
 }
 
 /* 1. BARRA SUPERIOR NEGRA */
@@ -36,7 +42,7 @@ a {
     width: 25px;
     height: 25px;
     margin-right: 5px;
-    vertical-align: -0.3em; /* Sube ~1.5-2px; ajusta a -0.15em si es poco */
+    vertical-align: -0.3em;
 }
      
      
@@ -57,7 +63,7 @@ a {
 }
 
 .bag-icon {
-    vertical-align: -0.15em; /* Sube el ícono ~2-3px; ajusta a -0.2em si es poco */
+    vertical-align: -0.15em;
 }
 
 .main-header {
@@ -145,7 +151,13 @@ a {
 .product-card {
     overflow: hidden;
     padding: 15px;
-    flex: 0 0 auto; /* bloquea tamaño en flex/grid */
+    flex: 0 0 auto;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, outline 0.2s ease;
+}
+
+.product-card:focus {
+    outline: 3px solid #0080ff;
+    outline-offset: 5px;
 }
 
 .product-image-container {
@@ -213,9 +225,16 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.promotion-text { margin-bottom: 30px; padding-left: 0; }
+.promotion-text { 
+    margin-bottom: 30px; 
+    padding-left: 0; 
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
 .promotion-text h2 {
     font-size: 3.5em;
     font-weight: 800;
@@ -241,7 +260,7 @@ a {
 
 /* TARJETAS DE OFERTAS FIJAS */
 .product-card-offer {
-    flex: 0 0 auto; /* bloquea tamaño */
+    flex: 0 0 auto;
     border-radius: 80px;
     position: relative;
     background-color: rgba(255,255,255,0.8);
@@ -251,11 +270,17 @@ a {
     align-items: center;
     text-align: center;
     border: 1px solid rgba(255,255,255,0.5);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, outline 0.2s ease;
+}
+
+.product-card-offer:focus {
+    outline: 3px solid #0080ff;
+    outline-offset: 5px;
 }
 
 .product-card-offer img {
     width: 100%;
-    height: auto; /* mantiene tamaño actual */
+    height: auto;
     object-fit: contain;
     margin-bottom: 10px;
     display: block;
@@ -314,7 +339,7 @@ a {
 /* Zoom suave de la imagen dentro de la tarjeta */
 .product-card img, .product-card-offer img {
     transition: transform 0.35s ease;
-    border-radius: 12px; /* mantiene la forma redondeada */
+    border-radius: 12px;
 }
 
 /* Efecto al pasar el mouse sobre la tarjeta */
