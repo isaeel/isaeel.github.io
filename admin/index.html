@@ -1,130 +1,121 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Golazo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="d-flex me-auto mb-2 mb-lg-0" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-          <ul class="navbar-nav ">
-            <li class="nav-item">
-              <img src="./img/prfile.png" class="rounded-circle border border-success" width="35px" height="35px">
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pablo Isael
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Perfil</a></li>
-                <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-              </ul>
-            </li>
-          </ul>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Producto</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">KosmeTICs</div>
+    <nav>
+      <a href="#">Shop</a>
+      <a href="#">Brands</a>
+      <a href="#">Offers</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+    </nav>
+    <div class="icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </header>
+
+  <!-- PRODUCT SECTION -->
+  <section class="product-section">
+    <!-- Galería -->
+    <div class="product-gallery">
+      <div class="thumbs">
+        <img src="./img/thumbs/img.jpeg" alt="thumb" class="thumb active">
+        <img src="./img/thumbs/img2.jpeg" alt="thumb" class="thumb">
+        <img src="./img/thumbs/img3.jpeg" alt="thumb" class="thumb">
+        <img src="./img/thumbs/img4.jpg" alt="thumb" class="thumb">
+      </div>
+      <div class="main-img">
+        <img id="main-product-img" src="./img/img.jpeg" alt="Producto principal">
+      </div>
+    </div>
+
+    <!-- Detalles del producto -->
+    <div class="product-info">
+      <p class="brand">EVERYDAY HUMANS</p>
+      <h1>Oh My Bod! Sunscreen Lotion</h1>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>214 reviews</span>
+      </div>
+      <div class="price">
+        <span class="current">$16.00</span>
+        <span class="old">$20.00</span>
+        <span class="discount">20% OFF</span>
+      </div>
+      <p class="desc">A reliable bodyguard for your skin, with secret uses. This lightweight, long-lasting SPF50
+        sunscreen lotion protects you from the harshest midday sun.</p>
+
+      <!-- Tallas -->
+      <div class="option">
+        <h3>Size:</h3>
+        <div class="sizes">
+          <button class="size-btn">50ml</button>
+          <button class="size-btn active">100ml</button>
         </div>
       </div>
-    </nav>
-    <div class="row">
-      <aside class="col-2">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <i class="fa fa-home"></i> Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fa fa-list"></i> Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fa fa-shopping-cart"></i> Pedidos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fa fa-users"></i> Usuarios</a>
-          </li>
-        </ul>
-      </aside>
-      <main class="col-10 p-2">
-        <!-- STATS -->
-        <div class="row p-2">
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <h3><i class="fa fa-shopping-cart"></i></h3>
-                  </div>
-                  <div class="col">
-                    <h3 class="h2 text-center">20</h3>
-                    <small>Pedidos</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <h3><i class="fa fa-money-bill"></i></h3>
-                  </div>
-                  <div class="col">
-                    <h3 class="h2 text-center">$20.00</h3>
-                    <small>Ingresos</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <h3><i class="fa fa-money-check"></i></h3>
-                  </div>
-                  <div class="col">
-                    <h3 class="h2 text-center">$20.00</h3>
-                    <small>Egresos</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <h3><i class="fa fa-heart"></i></h3>
-                  </div>
-                  <div class="col">
-                    <h3 class="h2 text-center">20</h3>
-                    <small>Ventas</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+
+      <!-- Cantidad -->
+      <div class="quantity">
+        <button id="decrease">-</button>
+        <input type="number" id="quantity" value="1" min="1">
+        <button id="increase">+</button>
+      </div>
+
+      <!-- Botón añadir al carrito -->
+      <button class="add-cart"><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
+
+      <p class="shipping">Ships for free the week of February 14th.</p>
+
+      <!-- Iconos info -->
+      <div class="product-icons">
+        <div><i class="fas fa-flask"></i> Safe & Non-toxic</div>
+        <div><i class="fas fa-user-md"></i> Dermatologist Created</div>
+        <div><i class="fas fa-leaf"></i> Biodegradable</div>
+        <div><i class="fas fa-paw"></i> Vegan & Cruelty-free</div>
+      </div>
+
+      <!-- Detalle -->
+      <div class="detail">
+        <h3>Detail</h3>
+        <p>This lightweight SPF50 lotion protects from UV exposures, dry skin and more.</p>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div id="reviews-container">
+
+    </div>
+    <div class="review-form">
+      <h3>Leave a Review</h3>
+      <input type="text" id="review-name" placeholder="Your name">
+      <textarea id="review-text" placeholder="Write your review..."></textarea>
+      <button id="submit-review">Submit Review</button>
+    </div>
+  </section>
+
+  <script src="./js/working.js"></script>
+</body>
+
 </html>
