@@ -55,7 +55,10 @@
     /* ── MAIN ── */
     main { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:64px 48px 100px; }
 
-    .section-block { opacity:0; transform:translateY(28px); animation:slide-up .7s .9s cubic-bezier(.4,0,.2,1) forwards; }
+    .section-block { opacity:0; transform:translateY(28px); animation:slide-up .7s cubic-bezier(.4,0,.2,1) forwards; }
+    .section-block:nth-child(1) { animation-delay: 0.9s; }
+    .section-block:nth-child(2) { animation-delay: 1.6s; margin-top: 80px; }
+    .section-block:nth-child(3) { animation-delay: 1.9s; margin-top: 80px; }
     .section-header { display:flex; align-items:center; gap:20px; margin-bottom:28px; padding-bottom:16px; border-bottom:1px solid var(--border); position:relative; }
     .section-header::after { content:''; position:absolute; bottom:-1px; left:0; height:1px; width:120px; background:linear-gradient(90deg,var(--accent),transparent); }
     .section-number { font-family:'Syne',sans-serif; font-size:3.2rem; font-weight:800; color:var(--accent); opacity:.15; line-height:1; }
@@ -172,10 +175,10 @@
 
 <!-- HEADER -->
 <header>
-  <div class="header-label">Lenguajes y Autómatas II</div>
+  <div class="header-label">Gerardo Lechuga</div>
   <div class="header-main">
-    <div class="course-tag">Unidad 1</div>
-    <h1>Análisis<br /><span>Semántico</span></h1>
+    <div class="course-tag">Temario</div>
+    <h1>Lenguajes y<br /><span>Automatas II</span></h1>
     <p class="header-sub">// Pablo Isael Gutiérrez Salas<span class="cursor"></span></p>
   </div>
 </header>
@@ -250,12 +253,81 @@
 
     </div>
   </div>
+
+  <!-- ══ UNIDAD 2 ══ -->
+  <div class="section-block" style="animation-delay:1.1s">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title-wrap">
+        <h2>Generación de Código Intermedio</h2>
+        <p>Haz clic en un subtema para ver ejemplos</p>
+      </div>
+    </div>
+    <div class="subtopics-grid">
+
+      <div class="card" onclick="openModal('u2m1')">
+        <div class="card-num">2.1</div>
+        <h3>Notaciones</h3>
+        <p class="card-desc">Formas de representar expresiones: prefija (operador antes), infija (operador en medio) y postfija (operador al final).</p>
+        <div class="card-cue">Ver ejemplos</div>
+        <div class="card-icon">📝</div>
+      </div>
+
+      <div class="card" onclick="openModal('u2m2')">
+        <div class="card-num">2.2</div>
+        <h3>Representaciones de Código Intermedio</h3>
+        <p class="card-desc">Notación Polaca, Código P, Triplos y Cuádruplos como estructuras para representar el código entre fuente y objeto.</p>
+        <div class="card-cue">Ver ejemplos</div>
+        <div class="card-icon">🔢</div>
+      </div>
+
+      <div class="card" onclick="openModal('u2m3')">
+        <div class="card-num">2.3</div>
+        <h3>Esquema de Generación</h3>
+        <p class="card-desc">Reglas para generar código intermedio a partir de variables, expresiones, asignaciones, control de flujo, funciones y estructuras.</p>
+        <div class="card-cue">Ver ejemplos</div>
+        <div class="card-icon">⚙️</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ UNIDAD 3 ══ -->
+  <div class="section-block" style="animation-delay:1.2s">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title-wrap">
+        <h2>Optimización</h2>
+        <p>Haz clic en un subtema para ver ejemplos</p>
+      </div>
+    </div>
+    <div class="subtopics-grid">
+
+      <div class="card" onclick="openModal('u3m1')">
+        <div class="card-num">3.1</div>
+        <h3>Tipos de Optimización</h3>
+        <p class="card-desc">Técnicas locales, de ciclos, globales y de mirilla para mejorar el rendimiento del código generado sin alterar su semántica.</p>
+        <div class="card-cue">Ver ejemplos</div>
+        <div class="card-icon">🚀</div>
+      </div>
+
+      <div class="card" onclick="openModal('u3m2')">
+        <div class="card-num">3.2</div>
+        <h3>Costos</h3>
+        <p class="card-desc">Medición de costos de ejecución en memoria, registros y pilas; criterios de mejora y herramientas de análisis de flujo de datos.</p>
+        <div class="card-cue">Ver ejemplos</div>
+        <div class="card-icon">📊</div>
+      </div>
+
+    </div>
+  </div>
+
 </main>
 
 <footer>
   <span>Lenguajes y Autómatas II</span>
   <div class="footer-dot"></div>
-  <span>Análisis Semántico · Unidad 1</span>
+  <span>Unidades 1 · 2 · 3</span>
 </footer>
 
 <!-- ═══ MODAL 1 ═══ -->
@@ -577,6 +649,240 @@
 
   [Advertencia] línea 10, col 8:
     → Variable 'resultado' declarada pero nunca utilizada.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL U2-1 — Notaciones ═══ -->
+<div class="modal-overlay" id="u2m1">
+  <div class="modal">
+    <div class="modal-head">
+      <div><div class="modal-num">SUBTEMA 2.1</div><h2>Notaciones</h2></div>
+      <button class="modal-close" onclick="closeModal('u2m1')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab(this,'u2t1-exp')">Explicación</button>
+        <button class="tab-btn" onclick="switchTab(this,'u2t1-tree')">Diagrama</button>
+      </div>
+      <div class="tab-pane active" id="u2t1-exp">
+        <div class="explain-step"><div class="step-num">1</div><div class="step-text"><strong>Notación Prefija:</strong> El operador aparece <em>antes</em> de sus operandos. Ejemplo: <code>+ 3 5</code> equivale a <code>3 + 5</code>. No requiere paréntesis ni reglas de precedencia para su evaluación.</div></div>
+        <div class="explain-step"><div class="step-num">2</div><div class="step-text"><strong>Notación Infija:</strong> El operador aparece <em>entre</em> sus operandos. Es la notación matemática habitual: <code>3 + 5</code>. Requiere paréntesis o reglas de precedencia para evitar ambigüedades.</div></div>
+        <div class="explain-step"><div class="step-num">3</div><div class="step-text"><strong>Notación Postfija (RPN):</strong> El operador aparece <em>después</em> de sus operandos. Ejemplo: <code>3 5 +</code>. Los compiladores la prefieren porque se evalúa fácilmente con una pila, sin necesidad de paréntesis.</div></div>
+        <div class="explain-step"><div class="step-num">4</div><div class="step-text"><strong>Conversión:</strong> Para convertir infija a postfija se usa el algoritmo <em>Shunting-yard</em> de Dijkstra, que emplea una pila de operadores y respeta la precedencia y asociatividad.</div></div>
+      </div>
+      <div class="tab-pane" id="u2t1-tree">
+        <div class="tree-label">Comparación de las tres notaciones para: (3 + 5) * 2</div>
+        <div class="tree-box">  Infija   →   (3 + 5) * 2
+  Prefija  →   * + 3 5 2
+  Postfija →   3 5 + 2 *</div>
+        <div class="tree-label" style="margin-top:20px">Evaluación postfija de "3 5 + 2 *" con pila</div>
+        <div class="tree-box">  Token  Acción          Pila
+  ─────────────────────────────────
+  3      PUSH            [ 3 ]
+  5      PUSH            [ 3, 5 ]
+  +      POP 5,3 → 8    [ 8 ]
+  2      PUSH            [ 8, 2 ]
+  *      POP 2,8 → 16   [ 16 ]
+  ─────────────────────────────────
+  Resultado: 16</div>
+        <div class="tree-label" style="margin-top:20px">Árbol con las tres notaciones mapeadas</div>
+        <div class="tree-box">         *(prefija: primer nodo)
+        / \
+       +   2
+      / \
+     3   5
+  Prefija:  * + 3 5 2   (preorden)
+  Postfija: 3 5 + 2 *   (postorden)
+  Infija:   (3+5)*2     (inorden)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL U2-2 — Representaciones de Código Intermedio ═══ -->
+<div class="modal-overlay" id="u2m2">
+  <div class="modal">
+    <div class="modal-head">
+      <div><div class="modal-num">SUBTEMA 2.2</div><h2>Representaciones de Código Intermedio</h2></div>
+      <button class="modal-close" onclick="closeModal('u2m2')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab(this,'u2t2-exp')">Explicación</button>
+        <button class="tab-btn" onclick="switchTab(this,'u2t2-tree')">Diagrama</button>
+      </div>
+      <div class="tab-pane active" id="u2t2-exp">
+        <div class="explain-step"><div class="step-num">1</div><div class="step-text"><strong>Notación Polaca (RPN):</strong> Representación postfija de expresiones. Usada internamente por intérpretes y compiladores para evaluar expresiones con una pila sin necesidad de paréntesis.</div></div>
+        <div class="explain-step"><div class="step-num">2</div><div class="step-text"><strong>Código P:</strong> Código intermedio para una máquina de pila abstracta (P-machine). Cada instrucción opera sobre una pila. Usado históricamente por compiladores de Pascal.</div></div>
+        <div class="explain-step"><div class="step-num">3</div><div class="step-text"><strong>Triplos:</strong> Representación con tres campos: <code>(operador, arg1, arg2)</code>. El resultado se referencia por número de instrucción. No requiere nombres temporales explícitos, pero son difíciles de reordenar.</div></div>
+        <div class="explain-step"><div class="step-num">4</div><div class="step-text"><strong>Cuádruplos:</strong> Representación con cuatro campos: <code>(op, arg1, arg2, resultado)</code>. El resultado se almacena en una variable temporal explícita (<code>t1, t2…</code>), facilitando la optimización y reordenamiento.</div></div>
+      </div>
+      <div class="tab-pane" id="u2t2-tree">
+        <div class="tree-label">Expresión: a = b * c + d — en las 4 representaciones</div>
+        <div class="tree-box">  NOTACIÓN POLACA (postfija):
+  b c * d + a =
+
+  CÓDIGO P:
+  LOAD b
+  LOAD c
+  MUL
+  LOAD d
+  ADD
+  STORE a</div>
+        <div class="tree-label" style="margin-top:20px">Triplos</div>
+        <div class="tree-box">  No.  │ Op  │ Arg1 │ Arg2
+  ─────┼─────┼──────┼──────
+  (1)  │  *  │  b   │  c
+  (2)  │  +  │ (1)  │  d      ← referencia a triplo 1
+  (3)  │  =  │  a   │ (2)     ← referencia a triplo 2</div>
+        <div class="tree-label" style="margin-top:20px">Cuádruplos</div>
+        <div class="tree-box">  No.  │ Op  │ Arg1 │ Arg2 │ Result
+  ─────┼─────┼──────┼──────┼────────
+  (1)  │  *  │  b   │  c   │  t1
+  (2)  │  +  │  t1  │  d   │  t2
+  (3)  │  =  │  t2  │  —   │  a</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL U2-3 — Esquema de Generación ═══ -->
+<div class="modal-overlay" id="u2m3">
+  <div class="modal">
+    <div class="modal-head">
+      <div><div class="modal-num">SUBTEMA 2.3</div><h2>Esquema de Generación</h2></div>
+      <button class="modal-close" onclick="closeModal('u2m3')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab(this,'u2t3-exp')">Explicación</button>
+        <button class="tab-btn" onclick="switchTab(this,'u2t3-tree')">Diagrama</button>
+      </div>
+      <div class="tab-pane active" id="u2t3-exp">
+        <div class="explain-step"><div class="step-num">1</div><div class="step-text"><strong>Variables y constantes:</strong> Una variable genera una instrucción <code>LOAD</code> (cargar su dirección). Una constante genera <code>LDC</code> (load constant). En cuádruplos: <code>(=, valor, —, t1)</code>.</div></div>
+        <div class="explain-step"><div class="step-num">2</div><div class="step-text"><strong>Expresiones:</strong> Se recorre el AST en postorden. Cada nodo BinOp genera un cuádruplo <code>(op, t_izq, t_der, t_nuevo)</code>. Los temporales se van acumulando hasta obtener el resultado final.</div></div>
+        <div class="explain-step"><div class="step-num">3</div><div class="step-text"><strong>Instrucciones de control:</strong> Los <code>if-else</code> generan etiquetas y saltos condicionales. Ejemplo: <code>(IF_FALSE, cond, —, L1)</code>, <code>(GOTO, —, —, L2)</code>, <code>(LABEL, L1)</code>.</div></div>
+        <div class="explain-step"><div class="step-num">4</div><div class="step-text"><strong>Funciones y estructuras:</strong> Las llamadas generan secuencias <code>PARAM</code> + <code>CALL</code>. Las estructuras (structs/arreglos) se acceden con aritmética de offsets: <code>(+, base, offset, dir)</code>.</div></div>
+      </div>
+      <div class="tab-pane" id="u2t3-tree">
+        <div class="tree-label">Asignación: x = a + b * c</div>
+        <div class="tree-box">  Cuádruplos generados:
+  ─────────────────────────────────────────
+  (1)  ( * ,  b ,  c ,  t1 )   →  t1 = b * c
+  (2)  ( + ,  a ,  t1 , t2 )   →  t2 = a + t1
+  (3)  ( = ,  t2 , — ,  x  )   →  x  = t2</div>
+        <div class="tree-label" style="margin-top:20px">Control: if (a > b) x = 1; else x = 2;</div>
+        <div class="tree-box">  (1)  ( > ,      a ,  b ,  t1    )
+  (2)  ( IF_FALSE, t1 , — ,  L1    )
+  (3)  ( = ,      1 ,  — ,  x     )
+  (4)  ( GOTO ,   — ,  — ,  L2    )
+  (5)  ( LABEL ,  L1 , — ,  —     )
+  (6)  ( = ,      2 ,  — ,  x     )
+  (7)  ( LABEL ,  L2 , — ,  —     )</div>
+        <div class="tree-label" style="margin-top:20px">Llamada a función: resultado = suma(a, b)</div>
+        <div class="tree-box">  (1)  ( PARAM ,  a ,  — ,  —        )
+  (2)  ( PARAM ,  b ,  — ,  —        )
+  (3)  ( CALL ,  suma , 2 ,  t1      )
+  (4)  ( = ,     t1 ,  — ,  resultado)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL U3-1 — Tipos de Optimización ═══ -->
+<div class="modal-overlay" id="u3m1">
+  <div class="modal">
+    <div class="modal-head">
+      <div><div class="modal-num">SUBTEMA 3.1</div><h2>Tipos de Optimización</h2></div>
+      <button class="modal-close" onclick="closeModal('u3m1')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab(this,'u3t1-exp')">Explicación</button>
+        <button class="tab-btn" onclick="switchTab(this,'u3t1-tree')">Diagrama</button>
+      </div>
+      <div class="tab-pane active" id="u3t1-exp">
+        <div class="explain-step"><div class="step-num">1</div><div class="step-text"><strong>Locales:</strong> Se aplican dentro de un bloque básico (secuencia lineal sin saltos). Incluyen eliminación de subexpresiones comunes, propagación de constantes y simplificación algebraica.</div></div>
+        <div class="explain-step"><div class="step-num">2</div><div class="step-text"><strong>De ciclos:</strong> Se aplican en bucles (for, while). Técnicas: <em>movimiento de código invariante</em> (sacar cálculos del bucle), <em>reducción de fuerza</em> (reemplazar multiplicaciones por sumas) y <em>eliminación de variables de inducción</em>.</div></div>
+        <div class="explain-step"><div class="step-num">3</div><div class="step-text"><strong>Globales:</strong> Análisis inter-bloques sobre el grafo de flujo completo del programa. Incluyen análisis de alcanzabilidad de definiciones, variables vivas y propagación global de constantes.</div></div>
+        <div class="explain-step"><div class="step-num">4</div><div class="step-text"><strong>De mirilla (Peephole):</strong> Se examina una ventana pequeña de instrucciones adyacentes y se reemplaza por secuencias más cortas o eficientes. Ejemplo: eliminar <code>STORE x / LOAD x</code> consecutivos.</div></div>
+      </div>
+      <div class="tab-pane" id="u3t1-tree">
+        <div class="tree-label">Optimización local — eliminación de subexpresiones comunes</div>
+        <div class="tree-box">  ANTES:                    DESPUÉS:
+  ──────────────────────────────────────────
+  t1 = b * c               t1 = b * c
+  t2 = b * c   ←duplicada  t2 = a + t1
+  t3 = a + t1              t3 = t2       ← reutiliza t2
+  t4 = a + t1  ←duplicada</div>
+        <div class="tree-label" style="margin-top:20px">Optimización de ciclo — código invariante</div>
+        <div class="tree-box">  ANTES:                    DESPUÉS:
+  ────────────────────────────────────────
+  for i = 1 to n:          t1 = x * y      ← sacado del bucle
+    a[i] = x * y + i       for i = 1 to n:
+                               a[i] = t1 + i</div>
+        <div class="tree-label" style="margin-top:20px">Optimización de mirilla (peephole)</div>
+        <div class="tree-box">  ANTES:               DESPUÉS:
+  ──────────────────────────────────
+  STORE  x             (instrucción eliminada)
+  LOAD   x    →        (instrucción eliminada)
+  ADD    y             ADD y             ← el valor ya está en registro</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL U3-2 — Costos ═══ -->
+<div class="modal-overlay" id="u3m2">
+  <div class="modal">
+    <div class="modal-head">
+      <div><div class="modal-num">SUBTEMA 3.2</div><h2>Costos</h2></div>
+      <button class="modal-close" onclick="closeModal('u3m2')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab(this,'u3t2-exp')">Explicación</button>
+        <button class="tab-btn" onclick="switchTab(this,'u3t2-tree')">Diagrama</button>
+      </div>
+      <div class="tab-pane active" id="u3t2-exp">
+        <div class="explain-step"><div class="step-num">1</div><div class="step-text"><strong>Costo de ejecución:</strong> Se mide en accesos a memoria, uso de registros y operaciones de pila. El objetivo es maximizar el uso de registros (rápidos) y minimizar accesos a memoria RAM (lentos).</div></div>
+        <div class="explain-step"><div class="step-num">2</div><div class="step-text"><strong>Criterios para mejorar el código:</strong> Reducir instrucciones totales, minimizar saltos (afectan el pipeline), reutilizar resultados ya calculados en registros, y preferir operaciones de menor ciclo de reloj.</div></div>
+        <div class="explain-step"><div class="step-num">3</div><div class="step-text"><strong>Análisis de flujo de datos:</strong> Técnica que calcula propiedades del programa en cada punto del grafo de flujo. Permite saber qué variables están vivas (<em>liveness</em>), qué definiciones alcanzan un punto (<em>reaching definitions</em>) y detectar código muerto.</div></div>
+        <div class="explain-step"><div class="step-num">4</div><div class="step-text"><strong>Herramientas:</strong> Grafos de flujo de control (CFG), árboles de dominadores, análisis de alias y herramientas como Valgrind, gprof o el optimizador de LLVM (<code>opt</code>) con sus distintos niveles <code>-O1 / -O2 / -O3</code>.</div></div>
+      </div>
+      <div class="tab-pane" id="u3t2-tree">
+        <div class="tree-label">Comparativa de costo por tipo de instrucción (ciclos de reloj aproximados)</div>
+        <div class="tree-box">  Operación              │ Costo (ciclos)
+  ───────────────────────┼────────────────
+  Registro → Registro    │   1
+  Suma/Resta entera      │   1
+  Multiplicación entera  │   3 – 5
+  Acceso a caché L1      │   4
+  Acceso a RAM           │  100 – 300
+  Salto condicional      │   1 – 20  (depende de predicción)
+  División entera        │  20 – 40</div>
+        <div class="tree-label" style="margin-top:20px">Análisis de liveness — variables vivas</div>
+        <div class="tree-box">  Instrucción         Variables vivas DESPUÉS
+  ────────────────────────────────────────────
+  (1) t1 = b * c      { b, c, a, t1 }
+  (2) t2 = a + t1     { t2 }
+  (3) x  = t2         { }  ← x no se usa después → código muerto posible
+
+  Si x nunca se lee tras esta asignación:
+  → Las instrucciones (1)(2)(3) pueden eliminarse.</div>
+        <div class="tree-label" style="margin-top:20px">Grafo de flujo de control (CFG) simplificado</div>
+        <div class="tree-box">  [Bloque 1: inicio]
+         │
+         ▼
+  [Bloque 2: condición]──NO──▶[Bloque 4: else]
+         │ SÍ                        │
+         ▼                           │
+  [Bloque 3: then]                   │
+         │◀──────────────────────────┘
+         ▼
+  [Bloque 5: fin]</div>
       </div>
     </div>
   </div>
